@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Hind+Siliguri&family=League+Spartan:wght@400;700&family=Montserrat&family=Poppins:ital,wght@0,200;0,300;1,200&family=Press+Start+2P&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: 0;
+            font-family: 'Press Start 2P', cursive;
+        }
+        body{
+            overflow: hidden;
+            color: white;
+            background: black;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+        }
+        .navbar{
+            margin: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .left{
+            border: 2px solid white;
+            background: white;
+            padding: 20px;
+            color: black;
+            text-align: center;
+        }
+        .info{
+            margin:20px;
+            padding-top: 30px;
+            margin-bottom: 6rem;
+            text-align: center;
+        }
+        .symbol{
+            position: relative;
+        }
+        .symbol h2{
+            position: absolute;
+            top:-3.3rem;
+            left: 50%;
+            width: fit-content;
+            color: black;
+            background: white;
+            padding: 30px;
+            border: 2px solid rgb(255, 255, 255);
+        }
+        .score{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 13rem;
+            margin-left: 3rem;
+            margin-right: 4rem;
+        }
+        .dialog{
+            background: black;
+            border: 1px solid white;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 10px;
+            width: 40%;
+            height: 80px;
+        }
+        .btn{
+            margin: 20px 0px ;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+        .right-container{
+            margin-top: 2rem;
+            line-height: 2rem;
+        }
+        @media only screen and (max-width:600px){
+            .navbar {
+                display: flex;
+                flex-direction: column;
+            }
+            .navbar .left, .right{
+                text-align: center;
+            }
+            .navbar .left h2{
+                width: 100%;
+            }
+            .navbar .right p{
+                margin-top: 20px;
+                width: 100%;
+            }
+            .symbol h2{
+                display: block;
+                left:42%;
+            }
+            .score{
+                display: flex;
+                flex-direction: column;
+                margin: 3rem 1rem;
+            }
+            .score .score-right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="navbar">
+                <div class="left">
+                    <h2>Again!</h2>
+                    
+                </div>
+                
+                <div class="right">
+                    <p>(Between 1 and 20)</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="info">
+                <h2 >Guess My Number!</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="symbol">
+                <h2>?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="score">
+                <div class="score-left">
+                    <input type="text" title="Enter text here" class="dialog">
+
+                    <br>
+                    <button class="btn" type="submit" title="click here">Check!</button>
+                </div>
+                <div class="score-right">
+                    <div class="message">
+                        <p>Start Guessing......</p>
+                    </div>
+                    <div class="right-container">
+                        <h4>Score:20</h4>
+                        <h4>High Score:</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="audio">
+            <audio src="super-mario-bros-4293 (1).mp3" controls loop></audio>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

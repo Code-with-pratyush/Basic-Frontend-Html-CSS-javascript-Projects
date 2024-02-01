@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <div class="rules" title="rules">
+      <i class="fa-solid fa-question"></i>
+      <div class="para hidden" id="para1">
+        1. At First Player 1 Is given a chance to run the Dice ,Which is    triggered by clicking on the Roll Dice button.
+        <br>
+        <br>
+        2. If the Dice counts to Value 1 The player 1 loses its chance and 
+           and its the next player turn.
+        <br>
+        <br>
+        3. The value on the dice gets added into the current score of the player and gets added to the total score by clicking on the Hold button,and if the Dice value counts to 1.
+        <br>
+        <br>
+        4. The PLayer which completes the score to 100 at first Wins.
+        <br>
+        <br>
+        5. All the Best
+        <br>
+      </div>
+    </div>
+    <main>
+
+
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Chintu</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="greet hidden" id="greet--0">Chintu wins</div>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Palki</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="greet hidden" id="greet--1">Palki wins</div>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="/4.png" alt="Playing dice" class="dice hidden" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
